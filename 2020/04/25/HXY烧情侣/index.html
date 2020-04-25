@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      HXY烧情侣 | PrincessYR&#39;blog 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="John Doe">
+    
+    
+
+    <meta name="description" content="双倍经验 这道题与CF的CF427C Checkposts十分相似 这道题难度并不大，只要会强连通分量基本上都能AC。 强连通分量讲解看这里 我们分步来看： 首先，他让我们找最小值，我们可以在求强连通分量是给每一个强连通分量先付一个最大值，然后在和属于这个强连通分量的点一一比较，取最小值即可。 1cost_last[numb]&#x3D;min(cost_last[numb],cost[q]);">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HXY烧情侣 | PrincessYR&#39;blog">
+<meta property="og:url" content="http://yoursite.com/2020/04/25/HXY%E7%83%A7%E6%83%85%E4%BE%A3/index.html">
+<meta property="og:site_name" content="PrincessYR&#39;blog">
+<meta property="og:description" content="双倍经验 这道题与CF的CF427C Checkposts十分相似 这道题难度并不大，只要会强连通分量基本上都能AC。 强连通分量讲解看这里 我们分步来看： 首先，他让我们找最小值，我们可以在求强连通分量是给每一个强连通分量先付一个最大值，然后在和属于这个强连通分量的点一一比较，取最小值即可。 1cost_last[numb]&#x3D;min(cost_last[numb],cost[q]);">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-04-25T08:12:59.000Z">
+<meta property="article:modified_time" content="2020-04-25T08:14:09.255Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Tarjan">
+<meta name="twitter:card" content="summary">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    
+<link rel="stylesheet" href="/css/uno.css">
+
+    
+<link rel="stylesheet" href="/css/highlight.css">
+
+    
+<link rel="stylesheet" href="/css/archive.css">
+
+    
+<link rel="stylesheet" href="/css/china-social-icon.css">
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">PrincessYR&#39;blog</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">HXY烧情侣</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2020-04-25" class="post-meta__date date">2020-04-25</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/Tarjan/" rel="tag">Tarjan</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <p><a href="https://www.luogu.com.cn/problem/CF427C" target="_blank" rel="noopener">双倍经验</a></p>
+<p>这道题与CF的CF427C Checkposts十分相似</p>
+<p>这道题难度并不大，只要会强连通分量基本上都能AC。</p>
+<p>强连通分量讲解<a href="https://183473.blog.luogu.org/tarjan-qiang-lian-tong-fen-liang" target="_blank" rel="noopener">看这里</a></p>
+<p>我们分步来看：</p>
+<p>首先，他让我们找最小值，我们可以在求强连通分量是给每一个强连通分量先付一个最大值，然后在和属于这个强连通分量的点一一比较，取最小值即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cost_last[numb]&#x3D;min(cost_last[numb],cost[q]);</span><br></pre></td></tr></table></figure>
+
+<p>cost_last[numb]为第numb个强连通分量的最小值，cost[q]为属于第numb个强连通分量的点q的花费。</p>
+<p>其次题目让我们求有几种花费相同的情况，我们可以去找每个强连通分量是否有花费一样的点，如果有就累乘，一直乘道最后，别忘了mod1000000007。</p>
+<p>温馨提示：</p>
+<h1 id="long-long"><a href="#long-long" class="headerlink" title="long long"></a>long long</h1><p>请记住不开long long见zz，多开long long见zz。</p>
+<p>最后贴上代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits&#x2F;stdc++.h&gt;</span><br><span class="line">#define MAX 0x3f3f3f3f</span><br><span class="line">using namespace std;</span><br><span class="line">const int M&#x3D; 1e5 + 10;</span><br><span class="line">const int mod&#x3D;1000000007; </span><br><span class="line">inline int read()</span><br><span class="line">&#123;</span><br><span class="line">	int x&#x3D;0,f&#x3D;1;</span><br><span class="line">	char ch&#x3D;getchar();</span><br><span class="line">	while(ch&lt;&#39;0&#39;||ch&gt;&#39;9&#39;)</span><br><span class="line">	&#123;</span><br><span class="line">		if(ch&#x3D;&#x3D;&#39;-&#39;)</span><br><span class="line">		f&#x3D;-1;</span><br><span class="line">		ch&#x3D;getchar();</span><br><span class="line">	&#125;</span><br><span class="line">	while(ch&gt;&#x3D;&#39;0&#39;&amp;&amp;ch&lt;&#x3D;&#39;9&#39;)</span><br><span class="line">	&#123;</span><br><span class="line">		x&#x3D;(x&lt;&lt;1)+(x&lt;&lt;3)+(ch^48);</span><br><span class="line">		ch&#x3D;getchar();</span><br><span class="line">	&#125;</span><br><span class="line">	return x*f;</span><br><span class="line">&#125;</span><br><span class="line">vector&lt;int&gt; m[M];</span><br><span class="line">vector&lt;int&gt; fe[M];</span><br><span class="line">stack&lt;int&gt; st;</span><br><span class="line">bool inst[M];</span><br><span class="line">int n,q,low[M],dfn[M],num;</span><br><span class="line">int a,b,numb;</span><br><span class="line">long long cost_last[M],cost[M],last_sum,latlat;</span><br><span class="line">int nums[M],tot;</span><br><span class="line">void tarjan(int x)</span><br><span class="line">&#123;</span><br><span class="line">	dfn[x]&#x3D;low[x]&#x3D;++num;</span><br><span class="line">	inst[x]&#x3D;true;</span><br><span class="line">	st.push(x);</span><br><span class="line">	for(int i&#x3D;0;i&lt;m[x].size();i++)</span><br><span class="line">	&#123;</span><br><span class="line">		int next&#x3D;m[x][i];</span><br><span class="line">		if(dfn[next]&#x3D;&#x3D;0)</span><br><span class="line">		&#123;</span><br><span class="line">			tarjan(next);</span><br><span class="line">			low[x]&#x3D;min(low[x],low[next]);</span><br><span class="line">		&#125;</span><br><span class="line">		else if(inst[next]&#x3D;&#x3D;1)</span><br><span class="line">		&#123;</span><br><span class="line">			low[x]&#x3D;min(low[x],dfn[next]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	if(dfn[x]&#x3D;&#x3D;low[x])</span><br><span class="line">	&#123;</span><br><span class="line">		numb++;</span><br><span class="line">		int q;</span><br><span class="line">		do</span><br><span class="line">		&#123;</span><br><span class="line">			q&#x3D;st.top();</span><br><span class="line">			st.pop();</span><br><span class="line">			inst[q]&#x3D;false;</span><br><span class="line">			&#x2F;&#x2F;bl[q]&#x3D;numb;</span><br><span class="line">			cost_last[numb]&#x3D;min(cost_last[numb],cost[q]);</span><br><span class="line">			fe[numb].push_back(q);</span><br><span class="line">		&#125;while(q!&#x3D;x);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">int main() </span><br><span class="line">&#123;</span><br><span class="line">	latlat&#x3D;1;</span><br><span class="line">	tot&#x3D;0;</span><br><span class="line">	memset(cost_last,21474836,sizeof(cost_last)) ;</span><br><span class="line">	n&#x3D;read();</span><br><span class="line">	for(int i&#x3D;1;i&lt;&#x3D;n;i++)</span><br><span class="line">	cost[i]&#x3D;read();</span><br><span class="line">	q&#x3D;read();</span><br><span class="line">	for(int i&#x3D;1;i&lt;&#x3D;q;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		a&#x3D;read();b&#x3D;read();</span><br><span class="line">		m[a].push_back(b);</span><br><span class="line">	&#125;</span><br><span class="line">	for(int i&#x3D;1;i&lt;&#x3D;n;i++)</span><br><span class="line">		if(dfn[i]&#x3D;&#x3D;0)</span><br><span class="line">		tarjan(i);</span><br><span class="line">	for(int i&#x3D;1;i&lt;&#x3D;numb;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		last_sum+&#x3D;cost_last[i];</span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;last_sum&lt;&lt;&quot; &quot;;</span><br><span class="line">	for(int i&#x3D;1;i&lt;&#x3D;numb;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		for(int j&#x3D;0;j&lt;fe[i].size();j++)</span><br><span class="line">		&#123;</span><br><span class="line">			if(cost[fe[i][j]]&#x3D;&#x3D;cost_last[i])</span><br><span class="line">			tot++;</span><br><span class="line">		&#125;</span><br><span class="line">		latlat&#x3D;(latlat*tot)%mod;</span><br><span class="line">		tot&#x3D;0;</span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;latlat;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+  </section>
+
+  <section class="post-comments">
+
+    <!-- 将评论系统（例如Disqus、多说、友言、畅言等）提供的代码片段粘贴在这里 -->
+    
+</section>
+
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno" target="_blank" rel="noopener">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
